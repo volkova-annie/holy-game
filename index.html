@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+        .shower section {
+            background-image: url('pictures/bg.png');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .progress::before {
+            background: #174a2e !important;
+        }
+
+        .result {
+            color: #801010;
+        }
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>Shower Presentation Engine</h1>
+        <p>Yours Truly, Famous Inc.</p>
+    </header>
+
+    <section class="slide slide-1" id="cover">
+        <header class="background">
+            <h2>Игра «Cто к одному»</h2>
+            <p>От разработчиков Альфа-банка</p>
+        </header>
+        <!--<img class="cover" src="pictures/bg.png" alt="Planet board">-->
+        <style>
+            section.slide {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+
+            .slide .background {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 605px;
+                position: absolute;
+                top: 37%;
+                border-radius: 11%;
+                background-color: #ffffff;
+                text-align: center;
+            }
+
+            .slide .background.answer {
+                width: 650px;
+                border-radius: 3%;
+                top: 3%;
+                padding: 15px;
+                border: 1px solid rgba(0, 0, 0, 0.4);
+                box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+            }
+
+            .slide ol {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 100px;
+                align-self: flex-start;
+                width: 500px;
+            }
+
+            .slide li {
+                width: 100%;
+                text-align: left;
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px dashed gray;
+            }
+
+            #cover h2 {
+                text-align: center;
+                font-size: 80px;
+            }
+
+            #cover p {
+                margin: 10px 0 0;
+                text-align: center;
+                font-style: italic;
+                font-size: 25px;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Кто самый главный человек в команде?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>Кто самый главный человек в команде?</h2>
+            <ol>
+                <li><span>Я</span><span class="result">50%</span></li>
+                <li class="next"><span>Тимлид</span><span class="result">20%</span></li>
+                <li class="next"><span>Тестировшик</span><span class="result">10%</span></li>
+                <li class="next"><span>Owner</span><span class="result">8%</span></li>
+                <li class="next"><span>Фронтендер</span><span class="result">6%</span></li>
+                <li class="next"><span>Никто</span><span class="result">4%</span></li>
+                <li class="next"><span>Бизнес</span><span class="result">2%</span></li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Какой редактор кода самый любимый?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>Какой редактор кода самый любимый?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Какой язык программирования самый лучший?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>Какой язык программирования самый лучший?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Что хотят изучить фронтенд разработчики в 2019 году?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>Что хотят изучить фронтенд разработчики в 2019 году?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Что часто гуглят в интернете?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>Что часто гуглят в интернете?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Самый любимый фреймворк во фронтенде?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>Самый любимый фреймворк во фронтенде?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Какой шрифт чаще всего используется на сайтах?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>Какой шрифт чаще всего используется на сайтах?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Самый популярный и надоевший вопрос на собеседованиях?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>Самый популярный и надоевший вопрос на собеседованиях?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Самая известная личность в мире фронтенда?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>Самая известная личность в мире фронтенда?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Любимый напиток фронтенд разработчиков?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>Любимый напиток фронтенд разработчиков?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Куда едут фронтенд разработчики в отпуск?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>Куда едут фронтенд разработчики в отпуск?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Самый любимый паттерн проектирования?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>Самый любимый паттерн проектирования?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Типизация, она какая?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>Типизация, она какая?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Самый любимый мерч на конференциях и митапах?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>Самый любимый мерч на конференциях и митапах?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Какой тег ты реже всего используешь?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>Какой тег ты реже всего используешь?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>В какой стране ты бы хотел жить и работать?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>В какой стране ты бы хотел жить и работать?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Что кричит фронтендер, когда наконец собрался билд?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>Что кричит фронтендер, когда наконец собрался билд?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Какая IT компания начинается на букву “A”?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>Какая IT компания начинается на букву “A”?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Какое слово постоянно использует фронтенд разработчик?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>Какое слово постоянно использует фронтенд разработчик?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>На что фронтенд разработчики тратят свою зарплату?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>На что фронтенд разработчики тратят свою зарплату?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Что приносят фронтенд разработчики на работу в день рождения?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>Что приносят фронтенд разработчики на работу в день рождения?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Самый крутой супер герой?</h2>
+        </header>
+    </section>
+
+    <section class="slide">
+        <div class="background answer">
+            <h2>Самый крутой супер герой?</h2>
+            <ol>
+                <!--<li><span>Я</span><span class="result">50%</span></li>-->
+                <!--<li class="next"><span>Тимлид</span><span class="result">20%</span></li>-->
+                <!--<li class="next"><span>Тестировшик</span><span class="result">10%</span></li>-->
+                <!--<li class="next"><span>Owner</span><span class="result">8%</span></li>-->
+                <!--<li class="next"><span>Фронтендер</span><span class="result">6%</span></li>-->
+                <!--<li class="next"><span>Никто</span><span class="result">4%</span></li>-->
+                <!--<li class="next"><span>Бизнес</span><span class="result">2%</span></li>-->
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide" id="thanks">
+        <header class="background">
+            <h2>Спасибо за игру :)</h2>
+        </header>
+        <style>
+            #thanks h2 {
+                font-size: 75px;
+            }
+        </style>
+    </section>
+
+    <footer class="badge">
+        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+    </footer>
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.min.js"></script>
+    <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
