@@ -23,6 +23,42 @@
             color: #801010;
         }
     </style>
+    <script>
+        function validateAnswer(form, input, wrong, item1, item2, item3, item4, item5, item6,
+                                value1, value2, value3, value4, value5, value6) {
+            form.addEventListener('keydown', (event) => {
+                if (event.key.toUpperCase() === 'ENTER') {
+                    event.stopPropagation();
+                }
+            });
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const inputValue = input.value.toLowerCase();
+
+                if (value1.includes(inputValue)) {
+                    hideElement(wrong, input, item1);
+                } else if (value2.includes(inputValue)) {
+                    hideElement(wrong, input, item2);
+                } else if (value3.includes(inputValue)) {
+                    hideElement(wrong, input, item3);
+                } else if (value4.includes(inputValue)) {
+                    hideElement(wrong, input, item4);
+                } else if (value5.includes(inputValue)) {
+                    hideElement(wrong, input, item5);
+                } else if (value6.includes(inputValue)) {
+                    hideElement(wrong, input, item6);
+                } else {
+                    wrong.classList.add('show')
+                }
+            });
+        }
+
+        function hideElement(element, input, item) {
+            item.classList.remove('hide');
+            element.classList.remove('show');
+        }
+    </script>
 </head>
 <body class="shower list">
 
@@ -236,36 +272,6 @@
             validateAnswer(form1, input1, wrong1, item_1_1, item_1_2, item_1_3, item_1_4, item_1_5, item_1_6,
                 value_1_1, value_1_2, value_1_3, value_1_4, value_1_5, value_1_6);
 
-            function validateAnswer(form, input, wrong, item1, item2, item3, item4, item5, item6,
-                                    value1, value2, value3, value4, value5, value6) {
-                form.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    const inputValue = input.value.toLowerCase();
-
-                    if (value1.includes(inputValue)) {
-                        hideElement(wrong, input, item1);
-                    } else if (value2.includes(inputValue)) {
-                        hideElement(wrong, input, item2);
-                    } else if (value3.includes(inputValue)) {
-                        hideElement(wrong, input, item3);
-                    } else if (value4.includes(inputValue)) {
-                        hideElement(wrong, input, item4);
-                    } else if (value5.includes(inputValue)) {
-                        hideElement(wrong, input, item5);
-                    } else if (value6.includes(inputValue)) {
-                        hideElement(wrong, input, item6);
-                    } else {
-                        wrong.classList.add('show')
-                    }
-                });
-            }
-
-            function hideElement(element, input, item) {
-                item.classList.remove('hide');
-                element.classList.remove('show');
-                input.value = '';
-            }
-
         </script>
     </section>
 
@@ -478,7 +484,7 @@
             <ol>
                 <li class="active"><span id="item-6-6" class="item hide"><span>Самый новый</span><span class="result">52</span></span></li>
                 <li class="active"><span id="item-6-5" class="item hide"><span>jQuery</span><span class="result">21</span></span></li>
-                <li class="active"><span id="item-6-4" class="item hide"><span>Vanilla JS (отсутствие фреймворка)</span><span class="result">14</span></span></li>
+                <li class="active"><span id="item-6-4" class="item hide"><span>Vanilla JS</span><span class="result">14</span></span></li>
                 <li class="active"><span id="item-6-3" class="item hide"><span>Angular на веки вечные</span><span class="result">7</span></span></li>
                 <li class="active"><span id="item-6-2" class="item hide"><span>Vue конечно же</span><span class="result">6</span></span></li>
                 <li class="active"><span id="item-6-1" class="item hide"><span>React, шучу, реакт не фреймворк</span><span class="result">2</span></span></li>
@@ -571,7 +577,7 @@
             <span class="wrong" id="wrong8">Нет такого ответа</span>
             <ol>
                 <li class="active"><span id="item-8-1" class="item hide"><span>Замыкания</span><span class="result">22</span></span></li>
-                <li class="active"><span id="item-8-2" class="item hide"><span>Кем вы себя видете через несколько лет?</span><span class="result">15</span></span></li>
+                <li class="active"><span id="item-8-2" class="item hide"><span>Кем вы себя видете через 5 лет?</span><span class="result">15</span></span></li>
                 <li class="active"><span id="item-8-3" class="item hide"><span>Расскажите о себе?</span><span class="result">9</span></span></li>
                 <li class="active"><span id="item-8-4" class="item hide"><span>Почему вы выбрали нас?</span><span class="result">8</span></span></li>
                 <li class="active"><span id="item-8-5" class="item hide"><span>Зарплатные ожидания</span><span class="result">6</span></span></li>
@@ -589,12 +595,13 @@
             const item_8_5 = document.getElementById('item-8-5');
             const item_8_6 = document.getElementById('item-8-6');
             const wrong8 = document.getElementById('wrong8');
-            const value_8_1 = ['roboto', 'робото'];
-            const value_8_2 = ['arial', 'ариал'];
-            const value_8_3 = ['helvetica', 'гельветика'];
-            const value_8_4 = ['open sans', 'os', 'опен санс', 'опенсанс'];
-            const value_8_5 = ['sans-serif', 'sans serif', 'sansserif', 'санс сериф', 'санс-сериф', 'санссериф'];
-            const value_8_6 = ['times new roman', 'timesnewroman', 'time roman', 'таймс', 'times'];
+            const value_8_1 = ['замыкания', 'про замыкания', 'closure'];
+            const value_8_2 = ['кем вы себя видете через несколько лет', 'кем вы себя видете через 5 лет', 'кем вы себя видите через несколько лет'
+                , 'кем вы себя видите через 5 лет'];
+            const value_8_3 = ['о себе', 'расскажите о себе', 'достоинства', 'сильные и слабые стороны', 'сильные стороны'];
+            const value_8_4 = ['почему вы выбрали нас', 'почему к нам', 'почему наша компания'];
+            const value_8_5 = ['зарплата', 'зп', 'зарплатные ожидания', 'почему так много'];
+            const value_8_6 = ['js', 'javascript', 'про джс', 'про  джаваскрипт', 'times'];
 
             validateAnswer(form8, input8, wrong8, item_8_1, item_8_2, item_8_3, item_8_4, item_8_5, item_8_6,
                 value_8_1, value_8_2, value_8_3, value_8_4, value_8_5, value_8_6);
@@ -995,47 +1002,6 @@
 
     <section class="slide">
         <div class="background answer">
-            <form id="form17">
-                <h2>Какое слово постоянно использует фронтенд разработчик?</h2>
-                <label for="input17" class="visually-hidden">Вопрос</label>
-                <input id="input17" type="text" placeholder="Ответ...">
-                <button type="submit">Проверить</button>
-            </form>
-            <span class="wrong" id="wrong17">Нет такого ответа</span>
-            <ol>
-                <li class="active"><span id="item-17-1" class="item hide"><span>Бл*</span><span class="result">16</span></span></li>
-                <li class="active"><span id="item-17-2" class="item hide"><span>Компонент</span><span class="result">8</span></span></li>
-                <li class="active"><span id="item-17-3" class="item hide"><span>Реакт</span><span class="result">7</span></span></li>
-                <li class="active"><span id="item-17-4" class="item hide"><span>Костыль</span><span class="result">5</span></span></li>
-                <li class="active"><span id="item-17-5" class="item hide"><span>Фронт</span><span class="result">4</span></span></li>
-                <li class="active"><span id="item-17-6" class="item hide"><span>Мат</span><span class="result">2</span></span></li>
-            </ol>
-        </div>
-
-        <script>
-            const form17 = document.getElementById('form17');
-            const input17 = document.getElementById('input17');
-            const item_17_1 = document.getElementById('item-17-1');
-            const item_17_2 = document.getElementById('item-17-2');
-            const item_17_3 = document.getElementById('item-17-3');
-            const item_17_4 = document.getElementById('item-17-4');
-            const item_17_5 = document.getElementById('item-17-5');
-            const item_17_6 = document.getElementById('item-17-6');
-            const wrong17 = document.getElementById('wrong17');
-            const value_17_1 = ['бля', 'блядь', 'блять', 'бл*', ''];
-            const value_17_2 = ['компонент', 'component', 'компонентный'];
-            const value_17_3 = ['react', 'реакт', 'reactjs', 'react js'];
-            const value_17_4 = ['костыль', 'костыли'];
-            const value_17_5 = ['front', 'фронт', 'frontend', 'фронтенд', 'фронтэнд'];
-            const value_17_6 = ['мат', '*****'];
-
-            validateAnswer(form17, input17, wrong17, item_17_1, item_17_2, item_17_3, item_17_4, item_17_5, item_17_6,
-                value_17_1, value_17_2, value_17_3, value_17_4, value_17_5, value_17_6);
-        </script>
-    </section>
-
-    <section class="slide">
-        <div class="background answer">
             <form id="form18">
                 <h2>Какая IT компания начинается на букву “A”?</h2>
                 <label for="input18" class="visually-hidden">Вопрос</label>
@@ -1075,6 +1041,46 @@
         </script>
     </section>
 
+    <section class="slide">
+        <div class="background answer">
+            <form id="form17">
+                <h2>Какое слово постоянно использует фронтенд разработчик?</h2>
+                <label for="input17" class="visually-hidden">Вопрос</label>
+                <input id="input17" type="text" placeholder="Ответ...">
+                <button type="submit">Проверить</button>
+            </form>
+            <span class="wrong" id="wrong17">Нет такого ответа</span>
+            <ol>
+                <li class="active"><span id="item-17-1" class="item hide"><span>Бл*</span><span class="result">16</span></span></li>
+                <li class="active"><span id="item-17-2" class="item hide"><span>Компонент</span><span class="result">8</span></span></li>
+                <li class="active"><span id="item-17-3" class="item hide"><span>Реакт</span><span class="result">7</span></span></li>
+                <li class="active"><span id="item-17-4" class="item hide"><span>Костыль</span><span class="result">5</span></span></li>
+                <li class="active"><span id="item-17-5" class="item hide"><span>Фронт</span><span class="result">4</span></span></li>
+                <li class="active"><span id="item-17-6" class="item hide"><span>Мат</span><span class="result">2</span></span></li>
+            </ol>
+        </div>
+
+        <script>
+            const form17 = document.getElementById('form17');
+            const input17 = document.getElementById('input17');
+            const item_17_1 = document.getElementById('item-17-1');
+            const item_17_2 = document.getElementById('item-17-2');
+            const item_17_3 = document.getElementById('item-17-3');
+            const item_17_4 = document.getElementById('item-17-4');
+            const item_17_5 = document.getElementById('item-17-5');
+            const item_17_6 = document.getElementById('item-17-6');
+            const wrong17 = document.getElementById('wrong17');
+            const value_17_1 = ['бля', 'блядь', 'блять', 'бл*', ''];
+            const value_17_2 = ['компонент', 'component', 'компонентный'];
+            const value_17_3 = ['react', 'реакт', 'reactjs', 'react js'];
+            const value_17_4 = ['костыль', 'костыли'];
+            const value_17_5 = ['front', 'фронт', 'frontend', 'фронтенд', 'фронтэнд'];
+            const value_17_6 = ['мат', '*****'];
+
+            validateAnswer(form17, input17, wrong17, item_17_1, item_17_2, item_17_3, item_17_4, item_17_5, item_17_6,
+                value_17_1, value_17_2, value_17_3, value_17_4, value_17_5, value_17_6);
+        </script>
+    </section>
 
     <section class="slide">
         <header class="background">
@@ -1209,9 +1215,9 @@
             const item_21_6 = document.getElementById('item-21-6');
             const wrong21 = document.getElementById('wrong21');
             const value_21_1 = ['желеный человек', 'iron man', 'ironman', 'железный чел', 'жч'];
-            const value_21_2 = ['бэтмэн', 'бетмен', 'бетмэн', 'бетман', 'бэтман', 'batman'];
+            const value_21_2 = ['бэтмэн', 'бэтмен', 'бетмен', 'бетмэн', 'бетман', 'бэтман', 'batman'];
             const value_21_3 = ['я'];
-            const value_21_4 = ['человек-паук', 'паук', 'spiderman', 'спайдермэн', 'спайдермен', 'спайдерман'];
+            const value_21_4 = ['человек-паук', 'паук', 'spiderman', 'спайдермэн', 'спайдермен', 'спайдерман', 'паучок'];
             const value_21_5 = ['девопс', 'devops'];
             const value_21_6 = ['нет', 'нету', 'никто'];
 
