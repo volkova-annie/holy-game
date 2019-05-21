@@ -107,7 +107,9 @@
             }
 
             .slide .background.rules {
-                top: 28%;
+                top: 4%;
+                border: 1px solid rgba(0, 0, 0, 0.4);
+                box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
             }
 
             .slide ol {
@@ -117,6 +119,7 @@
                 padding-left: 100px;
                 align-self: flex-start;
                 width: 500px;
+                margin-top: auto;
             }
 
             .slide li {
@@ -128,6 +131,10 @@
             .slide .item {
                 display: flex;
                 justify-content: space-between;
+            }
+
+            .slide a.qr {
+                color: transparent;
             }
 
             #cover h2 {
@@ -218,6 +225,10 @@
                 text-align: left;
             }
 
+            .rules h2 {
+                margin-top: 20px;
+            }
+
             .visually-hidden {
                 position: absolute;
                 width: 1px;
@@ -234,7 +245,8 @@
     <section class="slide">
         <div class="background rules">
             <h2>Правила игры</h2>
-            Необходимо угадать наиболее распространённые ответы фронтенд разработчиков на предложенные вопросы, на которые порой невозможно дать однозначно объективный ответ
+            Необходимо угадать наиболее распространённые ответы фронтенд-разработчиков на предложенные вопросы, на которые порой невозможно дать однозначно объективный ответ
+            <a href="http://qrcoder.ru" class="qr" target="_blank"><img src="http://qrcoder.ru/code/?https%3A%2F%2Ft.me%2FHollyAlfa100to1_bot&10&0" width="220" height="220" border="0" title="QR код"></a>
         </div>
     </section>
 
@@ -382,14 +394,14 @@
 
     <section class="slide">
         <header class="background">
-            <h2>Что хотят изучить фронтенд разработчики в 2019 году?</h2>
+            <h2>Что хотят изучить фронтенд-разработчики в 2019 году?</h2>
         </header>
     </section>
 
     <section class="slide">
         <div class="background answer">
             <form id="form4">
-                <h2>Что хотят изучить фронтенд разработчики в 2019 году</h2>
+                <h2>Что хотят изучить фронтенд-разработчики в 2019 году</h2>
                 <label for="input4" class="visually-hidden">Вопрос</label>
                 <input id="input4" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
@@ -666,14 +678,14 @@
 
     <section class="slide">
         <header class="background">
-            <h2>Любимый напиток фронтенд разработчиков?</h2>
+            <h2>Любимый напиток фронтенд-разработчиков?</h2>
         </header>
     </section>
 
     <section class="slide">
         <div class="background answer">
             <form id="form10">
-                <h2>Любимый напиток фронтенд разработчиков?</h2>
+                <h2>Любимый напиток фронтенд-разработчиков?</h2>
                 <label for="input10" class="visually-hidden">Вопрос</label>
                 <input id="input10" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
@@ -713,14 +725,14 @@
 
     <section class="slide">
         <header class="background">
-            <h2>Куда едут фронтенд разработчики в отпуск?</h2>
+            <h2>Куда едут фронтенд-разработчики в отпуск?</h2>
         </header>
     </section>
 
     <section class="slide">
         <div class="background answer">
             <form id="form11">
-                <h2>Куда едут фронтенд разработчики в отпуск?</h2>
+                <h2>Куда едут фронтенд-разработчики в отпуск?</h2>
                 <label for="input11" class="visually-hidden">Вопрос</label>
                 <input id="input11" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
@@ -794,7 +806,7 @@
             const item_12_6 = document.getElementById('item-12-6');
             const wrong12 = document.getElementById('wrong12');
             const value_12_1 = ['singleton', 'singlton', 'синглтон', 'синглетон'];
-            const value_12_2 = ['фабрика', 'fabric', 'fabrica'];
+            const value_12_2 = ['фабрика', 'fabric', 'fabrica', 'factory'];
             const value_12_3 = ['observer', 'observable', 'наблюдатель', 'обзервер'];
             const value_12_4 = ['xуяк-хуяк', 'xуяк', 'xуяк хуяк', 'xуякхуяк', 'хуяк-хуяк и в продакшен', 'хуякхуяк и в продакшн', 'хуяк-хуяк и в продакшн',
                 'хуякс хуякс и в продакшн', 'huyak-huyak & production', 'хуя хуяк и в продакшен'];
@@ -949,14 +961,14 @@
 
     <section class="slide">
         <header class="background">
-            <h2>В какой стране ты бы хотел жить и работать?</h2>
+            <h2>Лучшая страна для жизни и работы?</h2>
         </header>
     </section>
 
     <section class="slide">
         <div class="background answer">
             <form id="form16">
-                <h2>В какой стране ты бы хотел жить и работать?</h2>
+                <h2>Лучшая страна для жизни и работы?</h2>
                 <label for="input16" class="visually-hidden">Вопрос</label>
                 <input id="input16" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
@@ -986,7 +998,7 @@
             const value_16_2 = ['америка', 'штаты', 'сша', 'usa'];
             const value_16_3 = ['испания', 'spain'];
             const value_16_4 = ['германия', 'germany'];
-            const value_16_5 = ['голландия', 'нидерланы', 'nederland'];
+            const value_16_5 = ['голландия', 'нидерланы', 'netherlands'];
             const value_16_6 = ['в теплой', 'теплой'];
 
             validateAnswer(form16, input16, wrong16, item_16_1, item_16_2, item_16_3, item_16_4, item_16_5, item_16_6,
@@ -996,14 +1008,14 @@
 
     <section class="slide">
         <header class="background">
-            <h2>Какая IT компания начинается на букву “A”?</h2>
+            <h2>Какое слово постоянно использует фронтенд-разработчик?</h2>
         </header>
     </section>
 
     <section class="slide">
         <div class="background answer">
             <form id="form17">
-                <h2>Какое слово постоянно использует фронтенд разработчик?</h2>
+                <h2>Какое слово постоянно использует фронтенд-разработчик?</h2>
                 <label for="input17" class="visually-hidden">Вопрос</label>
                 <input id="input17" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
@@ -1039,6 +1051,12 @@
             validateAnswer(form17, input17, wrong17, item_17_1, item_17_2, item_17_3, item_17_4, item_17_5, item_17_6,
                 value_17_1, value_17_2, value_17_3, value_17_4, value_17_5, value_17_6);
         </script>
+    </section>
+
+    <section class="slide">
+        <header class="background">
+            <h2>Какая IT компания начинается на букву “A”?</h2>
+        </header>
     </section>
 
     <section class="slide">
@@ -1084,20 +1102,14 @@
 
     <section class="slide">
         <header class="background">
-            <h2>Какое слово постоянно использует фронтенд разработчик?</h2>
-        </header>
-    </section>
-
-    <section class="slide">
-        <header class="background">
-            <h2>На что фронтенд разработчики тратят свою зарплату?</h2>
+            <h2>На что фронтенд-разработчики тратят свою зарплату?</h2>
         </header>
     </section>
 
     <section class="slide">
         <div class="background answer">
             <form id="form19">
-                <h2>На что фронтенд разработчики тратят свою зарплату?</h2>
+                <h2>На что фронтенд-разработчики тратят свою зарплату?</h2>
                 <label for="input19" class="visually-hidden">Вопрос</label>
                 <input id="input19" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
@@ -1140,14 +1152,14 @@
 
     <section class="slide">
         <header class="background">
-            <h2>Что приносят фронтенд разработчики на работу в день рождения?</h2>
+            <h2>Что приносят фронтенд-разработчики на работу в день рождения?</h2>
         </header>
     </section>
 
     <section class="slide">
         <div class="background answer">
             <form id="form20">
-                <h2>Что приносят фронтенд разработчики на работу в день рождения?</h2>
+                <h2>Что приносят фронтенд-разработчики на работу в день рождения?</h2>
                 <label for="input20" class="visually-hidden">Вопрос</label>
                 <input id="input20" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
