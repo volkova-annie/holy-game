@@ -108,8 +108,8 @@
 
             .slide .background.rules {
                 top: 4%;
-                border: 1px solid rgba(0, 0, 0, 0.4);
-                box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+                bottom: 4%;
+                background-color: transparent;
             }
 
             .slide ol {
@@ -245,8 +245,7 @@
     <section class="slide">
         <div class="background rules">
             <h2>Правила игры</h2>
-            Необходимо угадать наиболее распространённые ответы фронтенд-разработчиков на предложенные вопросы, на которые порой невозможно дать однозначно объективный ответ
-            <a href="http://qrcoder.ru" class="qr" target="_blank"><img src="http://qrcoder.ru/code/?https%3A%2F%2Ft.me%2FHollyAlfa100to1_bot&10&0" width="220" height="220" border="0" title="QR код"></a>
+            Мы опросили 130 фронтенд-разработчиков, задав каждому нескольно неочевидных вопросов. Теперь мы предлагаем вам угадать что они ответили.
         </div>
     </section>
 
@@ -264,7 +263,7 @@
                 <input id="input1" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong1">Нет такого ответа</span>
+            <span class="wrong" id="wrong1">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-1-1" class="item hide"><span>Тимлид</span><span class="result">21</span></span></li>
                 <li class="active"><span id="item-1-2" class="item hide"><span>Я</span><span class="result">13</span></span></li>
@@ -312,7 +311,7 @@
                 <input id="input2" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong2">Нет такого ответа</span>
+            <span class="wrong" id="wrong2">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-2-1" class="item hide"><span>VS Code</span><span class="result">21</span></span></li>
                 <li class="active"><span id="item-2-2" class="item hide"><span>WebStorm</span><span class="result">13</span></span></li>
@@ -359,7 +358,7 @@
                 <input id="input3" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong3">Нет такого ответа</span>
+            <span class="wrong" id="wrong3">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-3-1" class="item hide"><span>JavaScript</span><span class="result">21</span></span></li>
                 <li class="active"><span id="item-3-2" class="item hide"><span>Python</span><span class="result">13</span></span></li>
@@ -406,7 +405,7 @@
                 <input id="input4" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong4">Нет такого ответа</span>
+            <span class="wrong" id="wrong4">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-4-1" class="item hide"><span>Svelte / Новые фреймворки</span><span class="result">21</span></span></li>
                 <li class="active"><span id="item-4-2" class="item hide"><span>React</span><span class="result">13</span></span></li>
@@ -453,7 +452,7 @@
                 <input id="input5" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong5">Нет такого ответа</span>
+            <span class="wrong" id="wrong5">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-5-1" class="item hide"><span>Порно</span><span class="result">21</span></span></li>
                 <li class="active"><span id="item-5-2" class="item hide"><span>Вопросы и ответы</span><span class="result">13</span></span></li>
@@ -500,7 +499,7 @@
                 <input id="input6" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong6">Нет такого ответа</span>
+            <span class="wrong" id="wrong6">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-6-1" class="item hide"><span>React, шучу, реакт не фреймворк</span><span class="result">21</span></span></li>
                 <li class="active"><span id="item-6-2" class="item hide"><span>Vue конечно же</span><span class="result">13</span></span></li>
@@ -547,7 +546,7 @@
                 <input id="input7" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong7">Нет такого ответа</span>
+            <span class="wrong" id="wrong7">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-7-1" class="item hide"><span>Roboto</span><span class="result">21</span></span></li>
                 <li class="active"><span id="item-7-2" class="item hide"><span>Arial</span><span class="result">13</span></span></li>
@@ -594,10 +593,10 @@
                 <input id="input8" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong8">Нет такого ответа</span>
+            <span class="wrong" id="wrong8">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-8-1" class="item hide"><span>Замыкания</span><span class="result">21</span></span></li>
-                <li class="active"><span id="item-8-2" class="item hide"><span>Кем вы себя видете через 5 лет?</span><span class="result">13</span></span></li>
+                <li class="active"><span id="item-8-2" class="item hide"><span>Кем вы себя видите через 5 лет?</span><span class="result">13</span></span></li>
                 <li class="active"><span id="item-8-3" class="item hide"><span>Расскажите о себе?</span><span class="result">8</span></span></li>
                 <li class="active"><span id="item-8-4" class="item hide"><span>Почему вы выбрали нас?</span><span class="result">5</span></span></li>
                 <li class="active"><span id="item-8-5" class="item hide"><span>Зарплатные ожидания</span><span class="result">3</span></span></li>
@@ -642,7 +641,7 @@
                 <input id="input9" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong9">Нет такого ответа</span>
+            <span class="wrong" id="wrong9">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-9-1" class="item hide"><span>Дэн Боженька Абрамов</span><span class="result">1</span></span></li>
                 <li class="active"><span id="item-9-2" class="item hide"><span>Андрей Ситник</span><span class="result">3</span></span></li>
@@ -690,7 +689,7 @@
                 <input id="input10" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong10">Нет такого ответа</span>
+            <span class="wrong" id="wrong10">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-10-1" class="item hide"><span>Кофе</span><span class="result">21</span></span></li>
                 <li class="active"><span id="item-10-2" class="item hide"><span>Смузи</span><span class="result">13</span></span></li>
@@ -737,7 +736,7 @@
                 <input id="input11" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong11">Нет такого ответа</span>
+            <span class="wrong" id="wrong11">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-11-1" class="item hide"><span>Азия (сказочноебали и Тайланд)</span><span class="result">21</span></span></li>
                 <li class="active"><span id="item-11-2" class="item hide"><span>Домой</span><span class="result">13</span></span></li>
@@ -784,7 +783,7 @@
                 <input id="input12" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong12">Нет такого ответа</span>
+            <span class="wrong" id="wrong12">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-12-1" class="item hide"><span>Синглтон - крутое название</span><span class="result">21</span></span></li>
                 <li class="active"><span id="item-12-2" class="item hide"><span>Фабрика</span><span class="result">13</span></span></li>
@@ -832,7 +831,7 @@
                 <input id="input13" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong13">Нет такого ответа</span>
+            <span class="wrong" id="wrong13">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-13-1" class="item hide"><span>Строгая</span><span class="result">21</span></span></li>
                 <li class="active"><span id="item-13-2" class="item hide"><span>Слабая</span><span class="result">13</span></span></li>
@@ -879,7 +878,7 @@
                 <input id="input14" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong14">Нет такого ответа</span>
+            <span class="wrong" id="wrong14">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-14-1" class="item hide"><span>Стикеры</span><span class="result">21</span></span></li>
                 <li class="active"><span id="item-14-2" class="item hide"><span>Футболки</span><span class="result">13</span></span></li>
@@ -926,7 +925,7 @@
                 <input id="input15" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong15">Нет такого ответа</span>
+            <span class="wrong" id="wrong15">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-15-1" class="item hide"><span>Хэштег</span><span class="result">21</span></span></li>
                 <li class="active"><span id="item-15-2" class="item hide"><span>marquee</span><span class="result">13</span></span></li>
@@ -973,7 +972,7 @@
                 <input id="input16" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong16">Нет такого ответа</span>
+            <span class="wrong" id="wrong16">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-16-1" class="item hide"><span>В России будущего</span><span class="result">21</span></span></li>
                 <li class="active"><span id="item-16-2" class="item hide"><span>Америка</span><span class="result">13</span></span></li>
@@ -1020,7 +1019,7 @@
                 <input id="input17" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong17">Нет такого ответа</span>
+            <span class="wrong" id="wrong17">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-17-1" class="item hide"><span>Бл*</span><span class="result">21</span></span></li>
                 <li class="active"><span id="item-17-2" class="item hide"><span>Компонент</span><span class="result">13</span></span></li>
@@ -1067,7 +1066,7 @@
                 <input id="input18" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong18">Нет такого ответа</span>
+            <span class="wrong" id="wrong18">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-18-1" class="item hide"><span>Amazon</span><span class="result">21</span></span></li>
                 <li class="active"><span id="item-18-2" class="item hide"><span>Apple</span><span class="result">13</span></span></li>
@@ -1114,7 +1113,7 @@
                 <input id="input19" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong19">Нет такого ответа</span>
+            <span class="wrong" id="wrong19">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-19-1" class="item hide"><span>На еду</span><span class="result">21</span></span></li>
                 <li class="active"><span id="item-19-2" class="item hide"><span>На ипотеку :(</span><span class="result">13</span></span></li>
@@ -1164,7 +1163,7 @@
                 <input id="input20" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong20">Нет такого ответа</span>
+            <span class="wrong" id="wrong20">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-20-1" class="item hide"><span>Пиццу</span><span class="result">21</span></span></li>
                 <li class="active"><span id="item-20-2" class="item hide"><span>Свое бренное тело</span><span class="result">13</span></span></li>
@@ -1211,7 +1210,7 @@
                 <input id="input21" type="text" placeholder="Ответ...">
                 <button type="submit">Проверить</button>
             </form>
-            <span class="wrong" id="wrong21">Нет такого ответа</span>
+            <span class="wrong" id="wrong21">Не очень популярный ответ</span>
             <ol>
                 <li class="active"><span id="item-21-1" class="item hide"><span>Железный человек</span><span class="result">21</span></span></li>
                 <li class="active"><span id="item-21-2" class="item hide"><span>Бэтмен</span><span class="result">13</span></span></li>
