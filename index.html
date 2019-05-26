@@ -72,7 +72,6 @@
             <h2>Игра «Cто к одному»</h2>
             <p>От разработчиков Альфа-банка</p>
         </header>
-        <!--<img class="cover" src="pictures/bg.png" alt="Planet board">-->
         <style>
             * {
                 box-sizing: border-box;
@@ -719,533 +718,529 @@
         </script>
     </section>
 
-<!--    =====-->
+    <section class="slide">
+        <header class="background">
+            <h2>Кто самый главный человек в команде?</h2>
+        </header>
+    </section>
 
-<!--    <section class="slide">-->
-<!--        <header class="background">-->
-<!--            <h2>Кто самый главный человек в команде?</h2>-->
-<!--        </header>-->
-<!--    </section>-->
+    <section class="slide">
+        <div class="background answer">
+            <form id="form1">
+                <h2>Кто самый главный человек в команде?</h2>
+                <label for="input1" class="visually-hidden">Вопрос</label>
+                <input id="input1" type="text" placeholder="Ответ...">
+                <button type="submit">Проверить</button>
+            </form>
+            <span class="wrong" id="wrong1">Не очень популярный ответ</span>
+            <ol>
+                <li class="active"><span id="item-1-1" class="item hide"><span>Тимлид</span><span class="result">21</span></span></li>
+                <li class="active"><span id="item-1-2" class="item hide"><span>Я</span><span class="result">13</span></span></li>
+                <li class="active"><span id="item-1-3" class="item hide"><span>Product Owner</span><span class="result">8</span></span></li>
+                <li class="active"><span id="item-1-4" class="item hide"><span>QA</span><span class="result">5</span></span></li>
+                <li class="active"><span id="item-1-5" class="item hide"><span>Фронтендер (разработчик)</span><span class="result">3</span></span></li>
+                <li class="active"><span id="item-1-6" class="item hide"><span>Все</span><span class="result">1</span></span></li>
+            </ol>
+        </div>
 
-<!--    <section class="slide">-->
-<!--        <div class="background answer">-->
-<!--            <form id="form1">-->
-<!--                <h2>Кто самый главный человек в команде?</h2>-->
-<!--                <label for="input1" class="visually-hidden">Вопрос</label>-->
-<!--                <input id="input1" type="text" placeholder="Ответ...">-->
-<!--                <button type="submit">Проверить</button>-->
-<!--            </form>-->
-<!--            <span class="wrong" id="wrong1">Не очень популярный ответ</span>-->
-<!--            <ol>-->
-<!--                <li class="active"><span id="item-1-1" class="item hide"><span>Тимлид</span><span class="result">21</span></span></li>-->
-<!--                <li class="active"><span id="item-1-2" class="item hide"><span>Я</span><span class="result">13</span></span></li>-->
-<!--                <li class="active"><span id="item-1-3" class="item hide"><span>Product Owner</span><span class="result">8</span></span></li>-->
-<!--                <li class="active"><span id="item-1-4" class="item hide"><span>QA</span><span class="result">5</span></span></li>-->
-<!--                <li class="active"><span id="item-1-5" class="item hide"><span>Фронтендер (разработчик)</span><span class="result">3</span></span></li>-->
-<!--                <li class="active"><span id="item-1-6" class="item hide"><span>Все</span><span class="result">1</span></span></li>-->
-<!--            </ol>-->
-<!--        </div>-->
+        <script>
+            const form1 = document.getElementById('form1');
+            const input1 = document.getElementById('input1');
+            const item_1_1 = document.getElementById('item-1-1');
+            const item_1_2 = document.getElementById('item-1-2');
+            const item_1_3 = document.getElementById('item-1-3');
+            const item_1_4 = document.getElementById('item-1-4');
+            const item_1_5 = document.getElementById('item-1-5');
+            const item_1_6 = document.getElementById('item-1-6');
+            const wrong1 = document.getElementById('wrong1');
+            const value_1_1 = ['тимлид', 'teamlead', 'лид'];
+            const value_1_2 = ['я', 'i'];
+            const value_1_3 = ['product owner', 'product', 'owner', 'продукт', 'po', 'по', 'продукт оунер'];
+            const value_1_4 = ['qa', 'тестировщик', 'тестер'];
+            const value_1_5 = ['фронтендер', 'разработчик', 'front', 'фронт'];
+            const value_1_6 = ['все', 'all', 'каждый'];
 
-<!--        <script>-->
-<!--            const form1 = document.getElementById('form1');-->
-<!--            const input1 = document.getElementById('input1');-->
-<!--            const item_1_1 = document.getElementById('item-1-1');-->
-<!--            const item_1_2 = document.getElementById('item-1-2');-->
-<!--            const item_1_3 = document.getElementById('item-1-3');-->
-<!--            const item_1_4 = document.getElementById('item-1-4');-->
-<!--            const item_1_5 = document.getElementById('item-1-5');-->
-<!--            const item_1_6 = document.getElementById('item-1-6');-->
-<!--            const wrong1 = document.getElementById('wrong1');-->
-<!--            const value_1_1 = ['тимлид', 'teamlead', 'лид'];-->
-<!--            const value_1_2 = ['я', 'i'];-->
-<!--            const value_1_3 = ['product owner', 'product', 'owner', 'продукт', 'po', 'по', 'продукт оунер'];-->
-<!--            const value_1_4 = ['qa', 'тестировщик', 'тестер'];-->
-<!--            const value_1_5 = ['фронтендер', 'разработчик', 'front', 'фронт'];-->
-<!--            const value_1_6 = ['все', 'all', 'каждый'];-->
+            validateAnswer(form1, input1, wrong1, item_1_1, item_1_2, item_1_3, item_1_4, item_1_5, item_1_6,
+                value_1_1, value_1_2, value_1_3, value_1_4, value_1_5, value_1_6);
 
-<!--            validateAnswer(form1, input1, wrong1, item_1_1, item_1_2, item_1_3, item_1_4, item_1_5, item_1_6,-->
-<!--                value_1_1, value_1_2, value_1_3, value_1_4, value_1_5, value_1_6);-->
+        </script>
+    </section>
 
-<!--        </script>-->
-<!--    </section>-->
+    <section class="slide">
+        <header class="background">
+            <h2>Что хотят изучить фронтенд-разработчики в 2019 году?</h2>
+        </header>
+    </section>
 
-<!--    <section class="slide">-->
-<!--        <header class="background">-->
-<!--            <h2>Что хотят изучить фронтенд-разработчики в 2019 году?</h2>-->
-<!--        </header>-->
-<!--    </section>-->
+    <section class="slide">
+        <div class="background answer">
+            <form id="form4">
+                <h2>Что хотят изучить фронтенд-разработчики в 2019 году</h2>
+                <label for="input4" class="visually-hidden">Вопрос</label>
+                <input id="input4" type="text" placeholder="Ответ...">
+                <button type="submit">Проверить</button>
+            </form>
+            <span class="wrong" id="wrong4">Не очень популярный ответ</span>
+            <ol>
+                <li class="active"><span id="item-4-1" class="item hide"><span>Svelte / Новые фреймворки</span><span class="result">21</span></span></li>
+                <li class="active"><span id="item-4-2" class="item hide"><span>React</span><span class="result">13</span></span></li>
+                <li class="active"><span id="item-4-3" class="item hide"><span>GraphQL</span><span class="result">8</span></span></li>
+                <li class="active"><span id="item-4-4" class="item hide"><span>Бэкенд</span><span class="result">5</span></span></li>
+                <li class="active"><span id="item-4-5" class="item hide"><span>Алгоритмы</span><span class="result">3</span></span></li>
+                <li class="active"><span id="item-4-6" class="item hide"><span>JavaScript</span><span class="result">1</span></span></li>
+            </ol>
+        </div>
 
-<!--    <section class="slide">-->
-<!--        <div class="background answer">-->
-<!--            <form id="form4">-->
-<!--                <h2>Что хотят изучить фронтенд-разработчики в 2019 году</h2>-->
-<!--                <label for="input4" class="visually-hidden">Вопрос</label>-->
-<!--                <input id="input4" type="text" placeholder="Ответ...">-->
-<!--                <button type="submit">Проверить</button>-->
-<!--            </form>-->
-<!--            <span class="wrong" id="wrong4">Не очень популярный ответ</span>-->
-<!--            <ol>-->
-<!--                <li class="active"><span id="item-4-1" class="item hide"><span>Svelte / Новые фреймворки</span><span class="result">21</span></span></li>-->
-<!--                <li class="active"><span id="item-4-2" class="item hide"><span>React</span><span class="result">13</span></span></li>-->
-<!--                <li class="active"><span id="item-4-3" class="item hide"><span>GraphQL</span><span class="result">8</span></span></li>-->
-<!--                <li class="active"><span id="item-4-4" class="item hide"><span>Бэкенд</span><span class="result">5</span></span></li>-->
-<!--                <li class="active"><span id="item-4-5" class="item hide"><span>Алгоритмы</span><span class="result">3</span></span></li>-->
-<!--                <li class="active"><span id="item-4-6" class="item hide"><span>JavaScript</span><span class="result">1</span></span></li>-->
-<!--            </ol>-->
-<!--        </div>-->
+        <script>
+            const form4 = document.getElementById('form4');
+            const input4 = document.getElementById('input4');
+            const item_4_1 = document.getElementById('item-4-1');
+            const item_4_2 = document.getElementById('item-4-2');
+            const item_4_3 = document.getElementById('item-4-3');
+            const item_4_4 = document.getElementById('item-4-4');
+            const item_4_5 = document.getElementById('item-4-5');
+            const item_4_6 = document.getElementById('item-4-6');
+            const wrong4 = document.getElementById('wrong4');
+            const value_4_1 = ['новые фреймворки', 'новое', 'new', 'svelte'];
+            const value_4_2 = ['react', 'реакт', 'reactjs', 'react js'];
+            const value_4_3 = ['graphql'];
+            const value_4_4 = ['бэкенд', 'бекенд', 'бэкэнд', 'бэк', 'backend', 'бек'];
+            const value_4_5 = ['алгоритмы', 'графы', 'деревья и графы', 'деревья', 'базу', 'база', 'основы', 'data science'];
+            const value_4_6 = ['js', 'javascript', 'джс', 'джаваскрипт'];
 
-<!--        <script>-->
-<!--            const form4 = document.getElementById('form4');-->
-<!--            const input4 = document.getElementById('input4');-->
-<!--            const item_4_1 = document.getElementById('item-4-1');-->
-<!--            const item_4_2 = document.getElementById('item-4-2');-->
-<!--            const item_4_3 = document.getElementById('item-4-3');-->
-<!--            const item_4_4 = document.getElementById('item-4-4');-->
-<!--            const item_4_5 = document.getElementById('item-4-5');-->
-<!--            const item_4_6 = document.getElementById('item-4-6');-->
-<!--            const wrong4 = document.getElementById('wrong4');-->
-<!--            const value_4_1 = ['новые фреймворки', 'новое', 'new', 'svelte'];-->
-<!--            const value_4_2 = ['react', 'реакт', 'reactjs', 'react js'];-->
-<!--            const value_4_3 = ['graphql'];-->
-<!--            const value_4_4 = ['бэкенд', 'бекенд', 'бэкэнд', 'бэк', 'backend', 'бек'];-->
-<!--            const value_4_5 = ['алгоритмы', 'графы', 'деревья и графы', 'деревья', 'базу', 'база', 'основы', 'data science'];-->
-<!--            const value_4_6 = ['js', 'javascript', 'джс', 'джаваскрипт'];-->
+            validateAnswer(form4, input4, wrong4, item_4_1, item_4_2, item_4_3, item_4_4, item_4_5, item_4_6,
+                value_4_1, value_4_2, value_4_3, value_4_4, value_4_5, value_4_6);
+        </script>
+    </section>
 
-<!--            validateAnswer(form4, input4, wrong4, item_4_1, item_4_2, item_4_3, item_4_4, item_4_5, item_4_6,-->
-<!--                value_4_1, value_4_2, value_4_3, value_4_4, value_4_5, value_4_6);-->
-<!--        </script>-->
-<!--    </section>-->
+    <section class="slide">
+        <header class="background">
+            <h2>Что часто гуглят в интернете?</h2>
+        </header>
+    </section>
 
-<!--    <section class="slide">-->
-<!--        <header class="background">-->
-<!--            <h2>Что часто гуглят в интернете?</h2>-->
-<!--        </header>-->
-<!--    </section>-->
+    <section class="slide">
+        <div class="background answer">
+            <form id="form5">
+                <h2>Что часто гуглят в интернете?</h2>
+                <label for="input5" class="visually-hidden">Вопрос</label>
+                <input id="input5" type="text" placeholder="Ответ...">
+                <button type="submit">Проверить</button>
+            </form>
+            <span class="wrong" id="wrong5">Не очень популярный ответ</span>
+            <ol>
+                <li class="active"><span id="item-5-1" class="item hide"><span>Порно</span><span class="result">21</span></span></li>
+                <li class="active"><span id="item-5-2" class="item hide"><span>Вопросы и ответы</span><span class="result">13</span></span></li>
+                <li class="active"><span id="item-5-3" class="item hide"><span>Мемы</span><span class="result">8</span></span></li>
+                <li class="active"><span id="item-5-4" class="item hide"><span>Как выйти из vim</span><span class="result">5</span></span></li>
+                <li class="active"><span id="item-5-5" class="item hide"><span>Котики</span><span class="result">3</span></span></li>
+                <li class="active"><span id="item-5-6" class="item hide"><span>Ошибки</span><span class="result">1</span></span></li>
+            </ol>
+        </div>
 
-<!--    <section class="slide">-->
-<!--        <div class="background answer">-->
-<!--            <form id="form5">-->
-<!--                <h2>Что часто гуглят в интернете?</h2>-->
-<!--                <label for="input5" class="visually-hidden">Вопрос</label>-->
-<!--                <input id="input5" type="text" placeholder="Ответ...">-->
-<!--                <button type="submit">Проверить</button>-->
-<!--            </form>-->
-<!--            <span class="wrong" id="wrong5">Не очень популярный ответ</span>-->
-<!--            <ol>-->
-<!--                <li class="active"><span id="item-5-1" class="item hide"><span>Порно</span><span class="result">21</span></span></li>-->
-<!--                <li class="active"><span id="item-5-2" class="item hide"><span>Вопросы и ответы</span><span class="result">13</span></span></li>-->
-<!--                <li class="active"><span id="item-5-3" class="item hide"><span>Мемы</span><span class="result">8</span></span></li>-->
-<!--                <li class="active"><span id="item-5-4" class="item hide"><span>Как выйти из vim</span><span class="result">5</span></span></li>-->
-<!--                <li class="active"><span id="item-5-5" class="item hide"><span>Котики</span><span class="result">3</span></span></li>-->
-<!--                <li class="active"><span id="item-5-6" class="item hide"><span>Ошибки</span><span class="result">1</span></span></li>-->
-<!--            </ol>-->
-<!--        </div>-->
+        <script>
+            const form5 = document.getElementById('form5');
+            const input5 = document.getElementById('input5');
+            const item_5_1 = document.getElementById('item-5-1');
+            const item_5_2 = document.getElementById('item-5-2');
+            const item_5_3 = document.getElementById('item-5-3');
+            const item_5_4 = document.getElementById('item-5-4');
+            const item_5_5 = document.getElementById('item-5-5');
+            const item_5_6 = document.getElementById('item-5-6');
+            const wrong5 = document.getElementById('wrong5');
+            const value_5_1 = ['порно', 'porn', 'porno', 'free porn'];
+            const value_5_2 = ['ответы на вопросы', 'ответы', 'ответ', 'вопросы', 'вопрос', 'how to do X', 'how to...', 'how to do something', 'how to'];
+            const value_5_3 = ['мемы', 'мемасы', 'мем', 'memes'];
+            const value_5_4 = ['how to exit vim', 'как выйти из vim', 'как выйти из vima', 'как выйти из вима'];
+            const value_5_5 = ['котики', 'котиков'];
+            const value_5_6 = ['ошибки', 'error', 'errors', 'сообщения об ошибках', 'как починить ошибку'];
 
-<!--        <script>-->
-<!--            const form5 = document.getElementById('form5');-->
-<!--            const input5 = document.getElementById('input5');-->
-<!--            const item_5_1 = document.getElementById('item-5-1');-->
-<!--            const item_5_2 = document.getElementById('item-5-2');-->
-<!--            const item_5_3 = document.getElementById('item-5-3');-->
-<!--            const item_5_4 = document.getElementById('item-5-4');-->
-<!--            const item_5_5 = document.getElementById('item-5-5');-->
-<!--            const item_5_6 = document.getElementById('item-5-6');-->
-<!--            const wrong5 = document.getElementById('wrong5');-->
-<!--            const value_5_1 = ['порно', 'porn', 'porno', 'free porn'];-->
-<!--            const value_5_2 = ['ответы на вопросы', 'ответы', 'ответ', 'вопросы', 'вопрос', 'how to do X', 'how to...', 'how to do something', 'how to'];-->
-<!--            const value_5_3 = ['мемы', 'мемасы', 'мем', 'memes'];-->
-<!--            const value_5_4 = ['how to exit vim', 'как выйти из vim', 'как выйти из vima', 'как выйти из вима'];-->
-<!--            const value_5_5 = ['котики', 'котиков'];-->
-<!--            const value_5_6 = ['ошибки', 'error', 'errors', 'сообщения об ошибках', 'как починить ошибку'];-->
+            validateAnswer(form5, input5, wrong5, item_5_1, item_5_2, item_5_3, item_5_4, item_5_5, item_5_6,
+                value_5_1, value_5_2, value_5_3, value_5_4, value_5_5, value_5_6);
+        </script>
+    </section>
 
-<!--            validateAnswer(form5, input5, wrong5, item_5_1, item_5_2, item_5_3, item_5_4, item_5_5, item_5_6,-->
-<!--                value_5_1, value_5_2, value_5_3, value_5_4, value_5_5, value_5_6);-->
-<!--        </script>-->
-<!--    </section>-->
+    <section class="slide">
+        <header class="background">
+            <h2>Самый любимый фреймворк во фронтенде?</h2>
+        </header>
+    </section>
 
-<!--    <section class="slide">-->
-<!--        <header class="background">-->
-<!--            <h2>Самый любимый фреймворк во фронтенде?</h2>-->
-<!--        </header>-->
-<!--    </section>-->
+    <section class="slide">
+        <div class="background answer">
+            <form id="form6">
+                <h2>Самый любимый фреймворк во фронтенде?</h2>
+                <label for="input6" class="visually-hidden">Вопрос</label>
+                <input id="input6" type="text" placeholder="Ответ...">
+                <button type="submit">Проверить</button>
+            </form>
+            <span class="wrong" id="wrong6">Не очень популярный ответ</span>
+            <ol>
+                <li class="active"><span id="item-6-1" class="item hide"><span>React, шучу, реакт не фреймворк</span><span class="result">21</span></span></li>
+                <li class="active"><span id="item-6-2" class="item hide"><span>Vue конечно же</span><span class="result">13</span></span></li>
+                <li class="active"><span id="item-6-3" class="item hide"><span>Angular на веки вечные</span><span class="result">8</span></span></li>
+                <li class="active"><span id="item-6-4" class="item hide"><span>jQuery</span><span class="result">5</span></span></li>
+                <li class="active"><span id="item-6-5" class="item hide"><span>Vanilla JS</span><span class="result">3</span></span></li>
+                <li class="active"><span id="item-6-6" class="item hide"><span>Самый новый</span><span class="result">1</span></span></li>
+            </ol>
+        </div>
 
-<!--    <section class="slide">-->
-<!--        <div class="background answer">-->
-<!--            <form id="form6">-->
-<!--                <h2>Самый любимый фреймворк во фронтенде?</h2>-->
-<!--                <label for="input6" class="visually-hidden">Вопрос</label>-->
-<!--                <input id="input6" type="text" placeholder="Ответ...">-->
-<!--                <button type="submit">Проверить</button>-->
-<!--            </form>-->
-<!--            <span class="wrong" id="wrong6">Не очень популярный ответ</span>-->
-<!--            <ol>-->
-<!--                <li class="active"><span id="item-6-1" class="item hide"><span>React, шучу, реакт не фреймворк</span><span class="result">21</span></span></li>-->
-<!--                <li class="active"><span id="item-6-2" class="item hide"><span>Vue конечно же</span><span class="result">13</span></span></li>-->
-<!--                <li class="active"><span id="item-6-3" class="item hide"><span>Angular на веки вечные</span><span class="result">8</span></span></li>-->
-<!--                <li class="active"><span id="item-6-4" class="item hide"><span>jQuery</span><span class="result">5</span></span></li>-->
-<!--                <li class="active"><span id="item-6-5" class="item hide"><span>Vanilla JS</span><span class="result">3</span></span></li>-->
-<!--                <li class="active"><span id="item-6-6" class="item hide"><span>Самый новый</span><span class="result">1</span></span></li>-->
-<!--            </ol>-->
-<!--        </div>-->
+        <script>
+            const form6 = document.getElementById('form6');
+            const input6 = document.getElementById('input6');
+            const item_6_1 = document.getElementById('item-6-1');
+            const item_6_2 = document.getElementById('item-6-2');
+            const item_6_3 = document.getElementById('item-6-3');
+            const item_6_4 = document.getElementById('item-6-4');
+            const item_6_5 = document.getElementById('item-6-5');
+            const item_6_6 = document.getElementById('item-6-6');
+            const wrong6 = document.getElementById('wrong6');
+            const value_6_1 = ['react', 'реакт', 'reactjs', 'react js', 'react+redux'];
+            const value_6_2 = ['vue', 'vuejs', 'vue js', 'вью', 'vue.js', 'вью джс', 'Vue 3'];
+            const value_6_3 = ['ангуляр', 'ангуляр джс', 'ангулярджс', 'angular', 'angularjs', 'angular js'];
+            const value_6_4 = ['jquery'];
+            const value_6_5 = ['vanilla js', 'vanillajs', 'vanilla', 'ванила', 'ванила джс', 'ванилла', 'ваниладжс'];
+            const value_6_6 = ['самый новый', 'новый', 'тот что поновее', 'new'];
 
-<!--        <script>-->
-<!--            const form6 = document.getElementById('form6');-->
-<!--            const input6 = document.getElementById('input6');-->
-<!--            const item_6_1 = document.getElementById('item-6-1');-->
-<!--            const item_6_2 = document.getElementById('item-6-2');-->
-<!--            const item_6_3 = document.getElementById('item-6-3');-->
-<!--            const item_6_4 = document.getElementById('item-6-4');-->
-<!--            const item_6_5 = document.getElementById('item-6-5');-->
-<!--            const item_6_6 = document.getElementById('item-6-6');-->
-<!--            const wrong6 = document.getElementById('wrong6');-->
-<!--            const value_6_1 = ['react', 'реакт', 'reactjs', 'react js', 'react+redux'];-->
-<!--            const value_6_2 = ['vue', 'vuejs', 'vue js', 'вью', 'vue.js', 'вью джс', 'Vue 3'];-->
-<!--            const value_6_3 = ['ангуляр', 'ангуляр джс', 'ангулярджс', 'angular', 'angularjs', 'angular js'];-->
-<!--            const value_6_4 = ['jquery'];-->
-<!--            const value_6_5 = ['vanilla js', 'vanillajs', 'vanilla', 'ванила', 'ванила джс', 'ванилла', 'ваниладжс'];-->
-<!--            const value_6_6 = ['самый новый', 'новый', 'тот что поновее', 'new'];-->
+            validateAnswer(form6, input6, wrong6, item_6_1, item_6_2, item_6_3, item_6_4, item_6_5, item_6_6,
+                value_6_1, value_6_2, value_6_3, value_6_4, value_6_5, value_6_6);
+        </script>
+    </section>
 
-<!--            validateAnswer(form6, input6, wrong6, item_6_1, item_6_2, item_6_3, item_6_4, item_6_5, item_6_6,-->
-<!--                value_6_1, value_6_2, value_6_3, value_6_4, value_6_5, value_6_6);-->
-<!--        </script>-->
-<!--    </section>-->
+    <section class="slide">
+        <header class="background">
+            <h2>Какой шрифт чаще всего используется на сайтах?</h2>
+        </header>
+    </section>
 
-<!--    <section class="slide">-->
-<!--        <header class="background">-->
-<!--            <h2>Какой шрифт чаще всего используется на сайтах?</h2>-->
-<!--        </header>-->
-<!--    </section>-->
+    <section class="slide">
+        <div class="background answer">
+            <form id="form7">
+                <h2>Какой шрифт чаще всего используется на сайтах?</h2>
+                <label for="input7" class="visually-hidden">Вопрос</label>
+                <input id="input7" type="text" placeholder="Ответ...">
+                <button type="submit">Проверить</button>
+            </form>
+            <span class="wrong" id="wrong7">Не очень популярный ответ</span>
+            <ol>
+                <li class="active"><span id="item-7-1" class="item hide"><span>Roboto</span><span class="result">21</span></span></li>
+                <li class="active"><span id="item-7-2" class="item hide"><span>Arial</span><span class="result">13</span></span></li>
+                <li class="active"><span id="item-7-3" class="item hide"><span>Helvetica</span><span class="result">8</span></span></li>
+                <li class="active"><span id="item-7-4" class="item hide"><span>Open Sans</span><span class="result">5</span></span></li>
+                <li class="active"><span id="item-7-5" class="item hide"><span>Sans-serif</span><span class="result">3</span></span></li>
+                <li class="active"><span id="item-7-6" class="item hide"><span>Times New Roman</span><span class="result">1</span></span></li>
+            </ol>
+        </div>
 
-<!--    <section class="slide">-->
-<!--        <div class="background answer">-->
-<!--            <form id="form7">-->
-<!--                <h2>Какой шрифт чаще всего используется на сайтах?</h2>-->
-<!--                <label for="input7" class="visually-hidden">Вопрос</label>-->
-<!--                <input id="input7" type="text" placeholder="Ответ...">-->
-<!--                <button type="submit">Проверить</button>-->
-<!--            </form>-->
-<!--            <span class="wrong" id="wrong7">Не очень популярный ответ</span>-->
-<!--            <ol>-->
-<!--                <li class="active"><span id="item-7-1" class="item hide"><span>Roboto</span><span class="result">21</span></span></li>-->
-<!--                <li class="active"><span id="item-7-2" class="item hide"><span>Arial</span><span class="result">13</span></span></li>-->
-<!--                <li class="active"><span id="item-7-3" class="item hide"><span>Helvetica</span><span class="result">8</span></span></li>-->
-<!--                <li class="active"><span id="item-7-4" class="item hide"><span>Open Sans</span><span class="result">5</span></span></li>-->
-<!--                <li class="active"><span id="item-7-5" class="item hide"><span>Sans-serif</span><span class="result">3</span></span></li>-->
-<!--                <li class="active"><span id="item-7-6" class="item hide"><span>Times New Roman</span><span class="result">1</span></span></li>-->
-<!--            </ol>-->
-<!--        </div>-->
+        <script>
+            const form7 = document.getElementById('form7');
+            const input7 = document.getElementById('input7');
+            const item_7_1 = document.getElementById('item-7-1');
+            const item_7_2 = document.getElementById('item-7-2');
+            const item_7_3 = document.getElementById('item-7-3');
+            const item_7_4 = document.getElementById('item-7-4');
+            const item_7_5 = document.getElementById('item-7-5');
+            const item_7_6 = document.getElementById('item-7-6');
+            const wrong7 = document.getElementById('wrong7');
+            const value_7_1 = ['roboto', 'робото'];
+            const value_7_2 = ['arial', 'ариал'];
+            const value_7_3 = ['helvetica', 'гельветика'];
+            const value_7_4 = ['open sans', 'os', 'опен санс', 'опенсанс'];
+            const value_7_5 = ['sans-serif', 'sans serif', 'sansserif', 'санс сериф', 'санс-сериф', 'санссериф'];
+            const value_7_6 = ['times new roman', 'timesnewroman', 'time roman', 'таймс', 'times'];
 
-<!--        <script>-->
-<!--            const form7 = document.getElementById('form7');-->
-<!--            const input7 = document.getElementById('input7');-->
-<!--            const item_7_1 = document.getElementById('item-7-1');-->
-<!--            const item_7_2 = document.getElementById('item-7-2');-->
-<!--            const item_7_3 = document.getElementById('item-7-3');-->
-<!--            const item_7_4 = document.getElementById('item-7-4');-->
-<!--            const item_7_5 = document.getElementById('item-7-5');-->
-<!--            const item_7_6 = document.getElementById('item-7-6');-->
-<!--            const wrong7 = document.getElementById('wrong7');-->
-<!--            const value_7_1 = ['roboto', 'робото'];-->
-<!--            const value_7_2 = ['arial', 'ариал'];-->
-<!--            const value_7_3 = ['helvetica', 'гельветика'];-->
-<!--            const value_7_4 = ['open sans', 'os', 'опен санс', 'опенсанс'];-->
-<!--            const value_7_5 = ['sans-serif', 'sans serif', 'sansserif', 'санс сериф', 'санс-сериф', 'санссериф'];-->
-<!--            const value_7_6 = ['times new roman', 'timesnewroman', 'time roman', 'таймс', 'times'];-->
+            validateAnswer(form7, input7, wrong7, item_7_1, item_7_2, item_7_3, item_7_4, item_7_5, item_7_6,
+                value_7_1, value_7_2, value_7_3, value_7_4, value_7_5, value_7_6);
+        </script>
+    </section>
 
-<!--            validateAnswer(form7, input7, wrong7, item_7_1, item_7_2, item_7_3, item_7_4, item_7_5, item_7_6,-->
-<!--                value_7_1, value_7_2, value_7_3, value_7_4, value_7_5, value_7_6);-->
-<!--        </script>-->
-<!--    </section>-->
+    <section class="slide">
+        <header class="background">
+            <h2>Самая известная личность в мире фронтенда?</h2>
+        </header>
+    </section>
 
-<!--    <section class="slide">-->
-<!--        <header class="background">-->
-<!--            <h2>Самая известная личность в мире фронтенда?</h2>-->
-<!--        </header>-->
-<!--    </section>-->
+    <section class="slide">
+        <div class="background answer">
+            <form id="form9">
+                <h2>Самая известная личность в мире фронтенда?</h2>
+                <label for="input9" class="visually-hidden">Вопрос</label>
+                <input id="input9" type="text" placeholder="Ответ...">
+                <button type="submit">Проверить</button>
+            </form>
+            <span class="wrong" id="wrong9">Не очень популярный ответ</span>
+            <ol>
+                <li class="active"><span id="item-9-1" class="item hide"><span>Дэн Боженька Абрамов</span><span class="result">1</span></span></li>
+                <li class="active"><span id="item-9-2" class="item hide"><span>Андрей Ситник</span><span class="result">3</span></span></li>
+                <li class="active"><span id="item-9-3" class="item hide"><span>Козуля</span><span class="result">5</span></span></li>
+                <li class="active"><span id="item-9-4" class="item hide"><span>Douglas Crockford</span><span class="result">8</span></span></li>
+                <li class="active"><span id="item-9-5" class="item hide"><span>Addy Osmani</span><span class="result">13</span></span></li>
+                <li class="active"><span id="item-9-6" class="item hide"><span>Brendan Eich</span><span class="result">21</span></span></li>
+            </ol>
+        </div>
 
-<!--    <section class="slide">-->
-<!--        <div class="background answer">-->
-<!--            <form id="form9">-->
-<!--                <h2>Самая известная личность в мире фронтенда?</h2>-->
-<!--                <label for="input9" class="visually-hidden">Вопрос</label>-->
-<!--                <input id="input9" type="text" placeholder="Ответ...">-->
-<!--                <button type="submit">Проверить</button>-->
-<!--            </form>-->
-<!--            <span class="wrong" id="wrong9">Не очень популярный ответ</span>-->
-<!--            <ol>-->
-<!--                <li class="active"><span id="item-9-1" class="item hide"><span>Дэн Боженька Абрамов</span><span class="result">1</span></span></li>-->
-<!--                <li class="active"><span id="item-9-2" class="item hide"><span>Андрей Ситник</span><span class="result">3</span></span></li>-->
-<!--                <li class="active"><span id="item-9-3" class="item hide"><span>Козуля</span><span class="result">5</span></span></li>-->
-<!--                <li class="active"><span id="item-9-4" class="item hide"><span>Douglas Crockford</span><span class="result">8</span></span></li>-->
-<!--                <li class="active"><span id="item-9-5" class="item hide"><span>Addy Osmani</span><span class="result">13</span></span></li>-->
-<!--                <li class="active"><span id="item-9-6" class="item hide"><span>Brendan Eich</span><span class="result">21</span></span></li>-->
-<!--            </ol>-->
-<!--        </div>-->
+        <script>
+            const form9 = document.getElementById('form9');
+            const input9 = document.getElementById('input9');
+            const item_9_1 = document.getElementById('item-9-1');
+            const item_9_2 = document.getElementById('item-9-2');
+            const item_9_3 = document.getElementById('item-9-3');
+            const item_9_4 = document.getElementById('item-9-4');
+            const item_9_5 = document.getElementById('item-9-5');
+            const item_9_6 = document.getElementById('item-9-6');
+            const wrong9 = document.getElementById('wrong9');
+            const value_9_1 = ['dan abramov', 'abramov', 'dan', 'абрамов', 'дэн', 'дэн абрамов', 'ден абрамов', 'даня абрамов'];
+            const value_9_2 = ['андрей ситник', 'ситник', 'andrey sitnik', 'sitnik'];
+            const value_9_3 = ['козуля', 'владислав козуля'];
+            const value_9_4 = ['douglas crockford', 'crockford', 'douglas', 'дуглас Крокфорд', 'дуглас', 'крокфорд'];
+            const value_9_5 = ['addy osmany', 'addy osmani','эдди османи', 'osmany', 'osmani', 'османи', 'addy', 'эдди'];
+            const value_9_6 = ['Brendan eich', 'eich', 'брендан эйх', 'брендан айк', 'эйх', 'айк', 'брендон айк', 'брендан аик'];
 
-<!--        <script>-->
-<!--            const form9 = document.getElementById('form9');-->
-<!--            const input9 = document.getElementById('input9');-->
-<!--            const item_9_1 = document.getElementById('item-9-1');-->
-<!--            const item_9_2 = document.getElementById('item-9-2');-->
-<!--            const item_9_3 = document.getElementById('item-9-3');-->
-<!--            const item_9_4 = document.getElementById('item-9-4');-->
-<!--            const item_9_5 = document.getElementById('item-9-5');-->
-<!--            const item_9_6 = document.getElementById('item-9-6');-->
-<!--            const wrong9 = document.getElementById('wrong9');-->
-<!--            const value_9_1 = ['dan abramov', 'abramov', 'dan', 'абрамов', 'дэн', 'дэн абрамов', 'ден абрамов', 'даня абрамов'];-->
-<!--            const value_9_2 = ['андрей ситник', 'ситник', 'andrey sitnik', 'sitnik'];-->
-<!--            const value_9_3 = ['козуля', 'владислав козуля'];-->
-<!--            const value_9_4 = ['douglas crockford', 'crockford', 'douglas', 'дуглас Крокфорд', 'дуглас', 'крокфорд'];-->
-<!--            const value_9_5 = ['addy osmany', 'addy osmani','эдди османи', 'osmany', 'osmani', 'османи', 'addy', 'эдди'];-->
-<!--            const value_9_6 = ['Brendan eich', 'eich', 'брендан эйх', 'брендан айк', 'эйх', 'айк', 'брендон айк', 'брендан аик'];-->
-
-<!--            validateAnswer(form9, input9, wrong9, item_9_1, item_9_2, item_9_3, item_9_4, item_9_5, item_9_6,-->
-<!--                value_9_1, value_9_2, value_9_3, value_9_4, value_9_5, value_9_6);-->
-<!--        </script>-->
-<!--    </section>-->
+            validateAnswer(form9, input9, wrong9, item_9_1, item_9_2, item_9_3, item_9_4, item_9_5, item_9_6,
+                value_9_1, value_9_2, value_9_3, value_9_4, value_9_5, value_9_6);
+        </script>
+    </section>
 
 
-<!--    <section class="slide">-->
-<!--        <header class="background">-->
-<!--            <h2>Любимый напиток фронтенд-разработчиков?</h2>-->
-<!--        </header>-->
-<!--    </section>-->
+    <section class="slide">
+        <header class="background">
+            <h2>Любимый напиток фронтенд-разработчиков?</h2>
+        </header>
+    </section>
 
-<!--    <section class="slide">-->
-<!--        <div class="background answer">-->
-<!--            <form id="form10">-->
-<!--                <h2>Любимый напиток фронтенд-разработчиков?</h2>-->
-<!--                <label for="input10" class="visually-hidden">Вопрос</label>-->
-<!--                <input id="input10" type="text" placeholder="Ответ...">-->
-<!--                <button type="submit">Проверить</button>-->
-<!--            </form>-->
-<!--            <span class="wrong" id="wrong10">Не очень популярный ответ</span>-->
-<!--            <ol>-->
-<!--                <li class="active"><span id="item-10-1" class="item hide"><span>Кофе</span><span class="result">21</span></span></li>-->
-<!--                <li class="active"><span id="item-10-2" class="item hide"><span>Смузи</span><span class="result">13</span></span></li>-->
-<!--                <li class="active"><span id="item-10-3" class="item hide"><span>Пиво</span><span class="result">8</span></span></li>-->
-<!--                <li class="active"><span id="item-10-4" class="item hide"><span>Чай</span><span class="result">5</span></span></li>-->
-<!--                <li class="active"><span id="item-10-5" class="item hide"><span>Вода</span><span class="result">3</span></span></li>-->
-<!--                <li class="active"><span id="item-10-6" class="item hide"><span>Слезы Джунов</span><span class="result">1</span></span></li>-->
-<!--            </ol>-->
-<!--        </div>-->
+    <section class="slide">
+        <div class="background answer">
+            <form id="form10">
+                <h2>Любимый напиток фронтенд-разработчиков?</h2>
+                <label for="input10" class="visually-hidden">Вопрос</label>
+                <input id="input10" type="text" placeholder="Ответ...">
+                <button type="submit">Проверить</button>
+            </form>
+            <span class="wrong" id="wrong10">Не очень популярный ответ</span>
+            <ol>
+                <li class="active"><span id="item-10-1" class="item hide"><span>Кофе</span><span class="result">21</span></span></li>
+                <li class="active"><span id="item-10-2" class="item hide"><span>Смузи</span><span class="result">13</span></span></li>
+                <li class="active"><span id="item-10-3" class="item hide"><span>Пиво</span><span class="result">8</span></span></li>
+                <li class="active"><span id="item-10-4" class="item hide"><span>Чай</span><span class="result">5</span></span></li>
+                <li class="active"><span id="item-10-5" class="item hide"><span>Вода</span><span class="result">3</span></span></li>
+                <li class="active"><span id="item-10-6" class="item hide"><span>Слезы Джунов</span><span class="result">1</span></span></li>
+            </ol>
+        </div>
 
-<!--        <script>-->
-<!--            const form10 = document.getElementById('form10');-->
-<!--            const input10 = document.getElementById('input10');-->
-<!--            const item_10_1 = document.getElementById('item-10-1');-->
-<!--            const item_10_2 = document.getElementById('item-10-2');-->
-<!--            const item_10_3 = document.getElementById('item-10-3');-->
-<!--            const item_10_4 = document.getElementById('item-10-4');-->
-<!--            const item_10_5 = document.getElementById('item-10-5');-->
-<!--            const item_10_6 = document.getElementById('item-10-6');-->
-<!--            const wrong10 = document.getElementById('wrong10');-->
-<!--            const value_10_1 = ['кофе', 'coffe', 'кофее', 'coffee'];-->
-<!--            const value_10_2 = ['смузи'];-->
-<!--            const value_10_3 = ['пиво', 'beer', 'пивко'];-->
-<!--            const value_10_4 = ['чай', 'черный чай', 'ромашковый чай', 'tea'];-->
-<!--            const value_10_5 = ['вода', 'water'];-->
-<!--            const value_10_6 = ['слезы', 'собственные слезы', 'слезы джунов'];-->
+        <script>
+            const form10 = document.getElementById('form10');
+            const input10 = document.getElementById('input10');
+            const item_10_1 = document.getElementById('item-10-1');
+            const item_10_2 = document.getElementById('item-10-2');
+            const item_10_3 = document.getElementById('item-10-3');
+            const item_10_4 = document.getElementById('item-10-4');
+            const item_10_5 = document.getElementById('item-10-5');
+            const item_10_6 = document.getElementById('item-10-6');
+            const wrong10 = document.getElementById('wrong10');
+            const value_10_1 = ['кофе', 'coffe', 'кофее', 'coffee'];
+            const value_10_2 = ['смузи'];
+            const value_10_3 = ['пиво', 'beer', 'пивко'];
+            const value_10_4 = ['чай', 'черный чай', 'ромашковый чай', 'tea'];
+            const value_10_5 = ['вода', 'water'];
+            const value_10_6 = ['слезы', 'собственные слезы', 'слезы джунов'];
 
-<!--            validateAnswer(form10, input10, wrong10, item_10_1, item_10_2, item_10_3, item_10_4, item_10_5, item_10_6,-->
-<!--                value_10_1, value_10_2, value_10_3, value_10_4, value_10_5, value_10_6);-->
-<!--        </script>-->
-<!--    </section>-->
+            validateAnswer(form10, input10, wrong10, item_10_1, item_10_2, item_10_3, item_10_4, item_10_5, item_10_6,
+                value_10_1, value_10_2, value_10_3, value_10_4, value_10_5, value_10_6);
+        </script>
+    </section>
 
-<!--    <section class="slide">-->
-<!--        <header class="background">-->
-<!--            <h2>Куда едут фронтенд-разработчики в отпуск?</h2>-->
-<!--        </header>-->
-<!--    </section>-->
+    <section class="slide">
+        <header class="background">
+            <h2>Куда едут фронтенд-разработчики в отпуск?</h2>
+        </header>
+    </section>
 
-<!--    <section class="slide">-->
-<!--        <div class="background answer">-->
-<!--            <form id="form11">-->
-<!--                <h2>Куда едут фронтенд-разработчики в отпуск?</h2>-->
-<!--                <label for="input11" class="visually-hidden">Вопрос</label>-->
-<!--                <input id="input11" type="text" placeholder="Ответ...">-->
-<!--                <button type="submit">Проверить</button>-->
-<!--            </form>-->
-<!--            <span class="wrong" id="wrong11">Не очень популярный ответ</span>-->
-<!--            <ol>-->
-<!--                <li class="active"><span id="item-11-1" class="item hide"><span>Азия (сказочноебали и Тайланд)</span><span class="result">21</span></span></li>-->
-<!--                <li class="active"><span id="item-11-2" class="item hide"><span>Домой</span><span class="result">13</span></span></li>-->
-<!--                <li class="active"><span id="item-11-3" class="item hide"><span>В отпуск</span><span class="result">8</span></span></li>-->
-<!--                <li class="active"><span id="item-11-4" class="item hide"><span>На море</span><span class="result">5</span></span></li>-->
-<!--                <li class="active"><span id="item-11-5" class="item hide"><span>На конфу</span><span class="result">3</span></span></li>-->
-<!--                <li class="active"><span id="item-11-6" class="item hide"><span>На дачу картоху копать</span><span class="result">1</span></span></li>-->
-<!--            </ol>-->
-<!--        </div>-->
+    <section class="slide">
+        <div class="background answer">
+            <form id="form11">
+                <h2>Куда едут фронтенд-разработчики в отпуск?</h2>
+                <label for="input11" class="visually-hidden">Вопрос</label>
+                <input id="input11" type="text" placeholder="Ответ...">
+                <button type="submit">Проверить</button>
+            </form>
+            <span class="wrong" id="wrong11">Не очень популярный ответ</span>
+            <ol>
+                <li class="active"><span id="item-11-1" class="item hide"><span>Азия (сказочноебали и Тайланд)</span><span class="result">21</span></span></li>
+                <li class="active"><span id="item-11-2" class="item hide"><span>Домой</span><span class="result">13</span></span></li>
+                <li class="active"><span id="item-11-3" class="item hide"><span>В отпуск</span><span class="result">8</span></span></li>
+                <li class="active"><span id="item-11-4" class="item hide"><span>На море</span><span class="result">5</span></span></li>
+                <li class="active"><span id="item-11-5" class="item hide"><span>На конфу</span><span class="result">3</span></span></li>
+                <li class="active"><span id="item-11-6" class="item hide"><span>На дачу картоху копать</span><span class="result">1</span></span></li>
+            </ol>
+        </div>
 
-<!--        <script>-->
-<!--            const form11 = document.getElementById('form11');-->
-<!--            const input11 = document.getElementById('input11');-->
-<!--            const item_11_1 = document.getElementById('item-11-1');-->
-<!--            const item_11_2 = document.getElementById('item-11-2');-->
-<!--            const item_11_3 = document.getElementById('item-11-3');-->
-<!--            const item_11_4 = document.getElementById('item-11-4');-->
-<!--            const item_11_5 = document.getElementById('item-11-5');-->
-<!--            const item_11_6 = document.getElementById('item-11-6');-->
-<!--            const wrong11 = document.getElementById('wrong11');-->
-<!--            const value_11_1 = ['сказочноебали', 'азия', 'тайланд', 'тай', 'бали', 'bali', 'asia', 'в азию', 'на бали', 'в тай', 'в тайланд'];-->
-<!--            const value_11_2 = ['домой', 'на родину'];-->
-<!--            const value_11_3 = ['в отпуск', 'отпуск'];-->
-<!--            const value_11_4 = ['на море', 'море', 'sea'];-->
-<!--            const value_11_5 = ['на конфу', 'на конференцию', 'конференция'];-->
-<!--            const value_11_6 = ['на дачу картоху копать', 'на дачу', 'дача', 'dacha'];-->
+        <script>
+            const form11 = document.getElementById('form11');
+            const input11 = document.getElementById('input11');
+            const item_11_1 = document.getElementById('item-11-1');
+            const item_11_2 = document.getElementById('item-11-2');
+            const item_11_3 = document.getElementById('item-11-3');
+            const item_11_4 = document.getElementById('item-11-4');
+            const item_11_5 = document.getElementById('item-11-5');
+            const item_11_6 = document.getElementById('item-11-6');
+            const wrong11 = document.getElementById('wrong11');
+            const value_11_1 = ['сказочноебали', 'азия', 'тайланд', 'тай', 'бали', 'bali', 'asia', 'в азию', 'на бали', 'в тай', 'в тайланд'];
+            const value_11_2 = ['домой', 'на родину'];
+            const value_11_3 = ['в отпуск', 'отпуск'];
+            const value_11_4 = ['на море', 'море', 'sea'];
+            const value_11_5 = ['на конфу', 'на конференцию', 'конференция'];
+            const value_11_6 = ['на дачу картоху копать', 'на дачу', 'дача', 'dacha'];
 
-<!--            validateAnswer(form11, input11, wrong11, item_11_1, item_11_2, item_11_3, item_11_4, item_11_5, item_11_6,-->
-<!--                value_11_1, value_11_2, value_11_3, value_11_4, value_11_5, value_11_6);-->
-<!--        </script>-->
-<!--    </section>-->
+            validateAnswer(form11, input11, wrong11, item_11_1, item_11_2, item_11_3, item_11_4, item_11_5, item_11_6,
+                value_11_1, value_11_2, value_11_3, value_11_4, value_11_5, value_11_6);
+        </script>
+    </section>
 
-<!--    <section class="slide">-->
-<!--        <header class="background">-->
-<!--            <h2>Самый любимый паттерн проектирования?</h2>-->
-<!--        </header>-->
-<!--    </section>-->
+    <section class="slide">
+        <header class="background">
+            <h2>Самый любимый паттерн проектирования?</h2>
+        </header>
+    </section>
 
-<!--    <section class="slide">-->
-<!--        <div class="background answer">-->
-<!--            <form id="form12">-->
-<!--                <h2>Самый любимый паттерн проектирования?</h2>-->
-<!--                <label for="input12" class="visually-hidden">Вопрос</label>-->
-<!--                <input id="input12" type="text" placeholder="Ответ...">-->
-<!--                <button type="submit">Проверить</button>-->
-<!--            </form>-->
-<!--            <span class="wrong" id="wrong12">Не очень популярный ответ</span>-->
-<!--            <ol>-->
-<!--                <li class="active"><span id="item-12-1" class="item hide"><span>Синглтон - крутое название</span><span class="result">21</span></span></li>-->
-<!--                <li class="active"><span id="item-12-2" class="item hide"><span>Фабрика</span><span class="result">13</span></span></li>-->
-<!--                <li class="active"><span id="item-12-3" class="item hide"><span>Observer</span><span class="result">8</span></span></li>-->
-<!--                <li class="active"><span id="item-12-4" class="item hide"><span>Х**к Х**к и в продакшн</span><span class="result">5</span></span></li>-->
-<!--                <li class="active"><span id="item-12-5" class="item hide"><span>Модуль</span><span class="result">3</span></span></li>-->
-<!--                <li class="active"><span id="item-12-6" class="item hide"><span>Костыльное программирование</span><span class="result">1</span></span></li>-->
-<!--            </ol>-->
-<!--        </div>-->
+    <section class="slide">
+        <div class="background answer">
+            <form id="form12">
+                <h2>Самый любимый паттерн проектирования?</h2>
+                <label for="input12" class="visually-hidden">Вопрос</label>
+                <input id="input12" type="text" placeholder="Ответ...">
+                <button type="submit">Проверить</button>
+            </form>
+            <span class="wrong" id="wrong12">Не очень популярный ответ</span>
+            <ol>
+                <li class="active"><span id="item-12-1" class="item hide"><span>Синглтон - крутое название</span><span class="result">21</span></span></li>
+                <li class="active"><span id="item-12-2" class="item hide"><span>Фабрика</span><span class="result">13</span></span></li>
+                <li class="active"><span id="item-12-3" class="item hide"><span>Observer</span><span class="result">8</span></span></li>
+                <li class="active"><span id="item-12-4" class="item hide"><span>Х**к Х**к и в продакшн</span><span class="result">5</span></span></li>
+                <li class="active"><span id="item-12-5" class="item hide"><span>Модуль</span><span class="result">3</span></span></li>
+                <li class="active"><span id="item-12-6" class="item hide"><span>Костыльное программирование</span><span class="result">1</span></span></li>
+            </ol>
+        </div>
 
-<!--        <script>-->
-<!--            const form12 = document.getElementById('form12');-->
-<!--            const input12 = document.getElementById('input12');-->
-<!--            const item_12_1 = document.getElementById('item-12-1');-->
-<!--            const item_12_2 = document.getElementById('item-12-2');-->
-<!--            const item_12_3 = document.getElementById('item-12-3');-->
-<!--            const item_12_4 = document.getElementById('item-12-4');-->
-<!--            const item_12_5 = document.getElementById('item-12-5');-->
-<!--            const item_12_6 = document.getElementById('item-12-6');-->
-<!--            const wrong12 = document.getElementById('wrong12');-->
-<!--            const value_12_1 = ['singleton', 'singlton', 'синглтон', 'синглетон'];-->
-<!--            const value_12_2 = ['фабрика', 'fabric', 'fabrica', 'factory'];-->
-<!--            const value_12_3 = ['observer', 'observable', 'наблюдатель', 'обзервер'];-->
-<!--            const value_12_4 = ['xуяк-хуяк', 'xуяк', 'xуяк хуяк', 'xуякхуяк', 'хуяк-хуяк и в продакшен', 'хуякхуяк и в продакшн', 'хуяк-хуяк и в продакшн',-->
-<!--                'хуякс хуякс и в продакшн', 'huyak-huyak & production', 'хуя хуяк и в продакшен'];-->
-<!--            const value_12_5 = ['модуль', 'module', 'modul'];-->
-<!--            const value_12_6 = ['костыль', 'костыли', 'костыльное программирование'];-->
+        <script>
+            const form12 = document.getElementById('form12');
+            const input12 = document.getElementById('input12');
+            const item_12_1 = document.getElementById('item-12-1');
+            const item_12_2 = document.getElementById('item-12-2');
+            const item_12_3 = document.getElementById('item-12-3');
+            const item_12_4 = document.getElementById('item-12-4');
+            const item_12_5 = document.getElementById('item-12-5');
+            const item_12_6 = document.getElementById('item-12-6');
+            const wrong12 = document.getElementById('wrong12');
+            const value_12_1 = ['singleton', 'singlton', 'синглтон', 'синглетон'];
+            const value_12_2 = ['фабрика', 'fabric', 'fabrica', 'factory'];
+            const value_12_3 = ['observer', 'observable', 'наблюдатель', 'обзервер'];
+            const value_12_4 = ['xуяк-хуяк', 'xуяк', 'xуяк хуяк', 'xуякхуяк', 'хуяк-хуяк и в продакшен', 'хуякхуяк и в продакшн', 'хуяк-хуяк и в продакшн',
+                'хуякс хуякс и в продакшн', 'huyak-huyak & production', 'хуя хуяк и в продакшен'];
+            const value_12_5 = ['модуль', 'module', 'modul'];
+            const value_12_6 = ['костыль', 'костыли', 'костыльное программирование'];
 
-<!--            validateAnswer(form12, input12, wrong12, item_12_1, item_12_2, item_12_3, item_12_4, item_12_5, item_12_6,-->
-<!--                value_12_1, value_12_2, value_12_3, value_12_4, value_12_5, value_12_6);-->
-<!--        </script>-->
-<!--    </section>-->
+            validateAnswer(form12, input12, wrong12, item_12_1, item_12_2, item_12_3, item_12_4, item_12_5, item_12_6,
+                value_12_1, value_12_2, value_12_3, value_12_4, value_12_5, value_12_6);
+        </script>
+    </section>
 
-<!--    <section class="slide">-->
-<!--        <header class="background">-->
-<!--            <h2>На что фронтенд-разработчики тратят свою зарплату?</h2>-->
-<!--        </header>-->
-<!--    </section>-->
+    <section class="slide">
+        <header class="background">
+            <h2>На что фронтенд-разработчики тратят свою зарплату?</h2>
+        </header>
+    </section>
 
-<!--    <section class="slide">-->
-<!--        <div class="background answer">-->
-<!--            <form id="form19">-->
-<!--                <h2>На что фронтенд-разработчики тратят свою зарплату?</h2>-->
-<!--                <label for="input19" class="visually-hidden">Вопрос</label>-->
-<!--                <input id="input19" type="text" placeholder="Ответ...">-->
-<!--                <button type="submit">Проверить</button>-->
-<!--            </form>-->
-<!--            <span class="wrong" id="wrong19">Не очень популярный ответ</span>-->
-<!--            <ol>-->
-<!--                <li class="active"><span id="item-19-1" class="item hide"><span>На еду</span><span class="result">21</span></span></li>-->
-<!--                <li class="active"><span id="item-19-2" class="item hide"><span>На ипотеку :(</span><span class="result">13</span></span></li>-->
-<!--                <li class="active"><span id="item-19-3" class="item hide"><span>На психологическую помощь</span><span class="result">8</span></span></li>-->
-<!--                <li class="active"><span id="item-19-4" class="item hide"><span>На женщин и на дачу тёще </span><span class="result">5</span></span></li>-->
-<!--                <li class="active"><span id="item-19-5" class="item hide"><span>Гаджеты</span><span class="result">3</span></span></li>-->
-<!--                <li class="active"><span id="item-19-6" class="item hide"><span>А там еще и платят?</span><span class="result">1</span></span></li>-->
-<!--            </ol>-->
-<!--        </div>-->
+    <section class="slide">
+        <div class="background answer">
+            <form id="form19">
+                <h2>На что фронтенд-разработчики тратят свою зарплату?</h2>
+                <label for="input19" class="visually-hidden">Вопрос</label>
+                <input id="input19" type="text" placeholder="Ответ...">
+                <button type="submit">Проверить</button>
+            </form>
+            <span class="wrong" id="wrong19">Не очень популярный ответ</span>
+            <ol>
+                <li class="active"><span id="item-19-1" class="item hide"><span>На еду</span><span class="result">21</span></span></li>
+                <li class="active"><span id="item-19-2" class="item hide"><span>На ипотеку :(</span><span class="result">13</span></span></li>
+                <li class="active"><span id="item-19-3" class="item hide"><span>На психологическую помощь</span><span class="result">8</span></span></li>
+                <li class="active"><span id="item-19-4" class="item hide"><span>На женщин и на дачу тёще </span><span class="result">5</span></span></li>
+                <li class="active"><span id="item-19-5" class="item hide"><span>Гаджеты</span><span class="result">3</span></span></li>
+                <li class="active"><span id="item-19-6" class="item hide"><span>А там еще и платят?</span><span class="result">1</span></span></li>
+            </ol>
+        </div>
 
-<!--        <script>-->
-<!--            const form19 = document.getElementById('form19');-->
-<!--            const input19 = document.getElementById('input19');-->
-<!--            const item_19_1 = document.getElementById('item-19-1');-->
-<!--            const item_19_2 = document.getElementById('item-19-2');-->
-<!--            const item_19_3 = document.getElementById('item-19-3');-->
-<!--            const item_19_4 = document.getElementById('item-19-4');-->
-<!--            const item_19_5 = document.getElementById('item-19-5');-->
-<!--            const item_19_6 = document.getElementById('item-19-6');-->
-<!--            const wrong19 = document.getElementById('wrong19');-->
-<!--            const value_19_1 = ['на еду', 'еда', 'food'];-->
-<!--            const value_19_2 = ['на ипотеку', 'ипотека', 'на квартиру', 'квартира', 'на кредит', 'кредит'];-->
-<!--            const value_19_3 = ['психиатра', 'на психиатра', 'психиатр', 'психолог', 'на психолога', 'психолога', 'на успокоительные', 'успокоительные',-->
-<!--                'на психологическую помощь', 'успакоительное', 'на антидепрессанты', 'антидепрессанты', 'антидепрессант'];-->
-<!--            const value_19_4 = ['на женщин', 'на шлюх', 'женщин', 'шлюх', 'на тещу', 'теша', 'на жену', 'жена', 'девушка', 'девушки', 'на девушек', 'телки'];-->
-<!--            const value_19_5 = ['гаджеты', 'гаджет', 'макбук', 'macbook', 'apple', 'на технику', 'техника', 'на гаджеты', 'apple', 'iphone',-->
-<!--                'gadgets', 'гироскутер', 'девайсы', 'На маки'];-->
-<!--            const value_19_6 = ['а там еще и платят', 'еще и платят', 'платят', '?', 'зарплату?', 'а там еще и платят?',-->
-<!--                'еще и платят?', 'платят?', 'зарплату?'];-->
+        <script>
+            const form19 = document.getElementById('form19');
+            const input19 = document.getElementById('input19');
+            const item_19_1 = document.getElementById('item-19-1');
+            const item_19_2 = document.getElementById('item-19-2');
+            const item_19_3 = document.getElementById('item-19-3');
+            const item_19_4 = document.getElementById('item-19-4');
+            const item_19_5 = document.getElementById('item-19-5');
+            const item_19_6 = document.getElementById('item-19-6');
+            const wrong19 = document.getElementById('wrong19');
+            const value_19_1 = ['на еду', 'еда', 'food'];
+            const value_19_2 = ['на ипотеку', 'ипотека', 'на квартиру', 'квартира', 'на кредит', 'кредит'];
+            const value_19_3 = ['психиатра', 'на психиатра', 'психиатр', 'психолог', 'на психолога', 'психолога', 'на успокоительные', 'успокоительные',
+                'на психологическую помощь', 'успакоительное', 'на антидепрессанты', 'антидепрессанты', 'антидепрессант'];
+            const value_19_4 = ['на женщин', 'на шлюх', 'женщин', 'шлюх', 'на тещу', 'теша', 'на жену', 'жена', 'девушка', 'девушки', 'на девушек', 'телки'];
+            const value_19_5 = ['гаджеты', 'гаджет', 'макбук', 'macbook', 'apple', 'на технику', 'техника', 'на гаджеты', 'apple', 'iphone',
+                'gadgets', 'гироскутер', 'девайсы', 'На маки'];
+            const value_19_6 = ['а там еще и платят', 'еще и платят', 'платят', '?', 'зарплату?', 'а там еще и платят?',
+                'еще и платят?', 'платят?', 'зарплату?'];
 
-<!--            validateAnswer(form19, input19, wrong19, item_19_1, item_19_2, item_19_3, item_19_4, item_19_5, item_19_6,-->
-<!--                value_19_1, value_19_2, value_19_3, value_19_4, value_19_5, value_19_6);-->
-<!--        </script>-->
-<!--    </section>-->
+            validateAnswer(form19, input19, wrong19, item_19_1, item_19_2, item_19_3, item_19_4, item_19_5, item_19_6,
+                value_19_1, value_19_2, value_19_3, value_19_4, value_19_5, value_19_6);
+        </script>
+    </section>
 
-<!--    =========-->
+    <section class="slide">
+        <header class="background">
+            <h2>Самый популярный и надоевший вопрос на собеседованиях?</h2>
+        </header>
+    </section>
 
-<!--    <section class="slide">-->
-<!--        <header class="background">-->
-<!--            <h2>Самый популярный и надоевший вопрос на собеседованиях?</h2>-->
-<!--        </header>-->
-<!--    </section>-->
+    <section class="slide">
+        <div class="background answer">
+            <form id="form8">
+                <h2>Самый популярный и надоевший вопрос на собеседованиях?</h2>
+                <label for="input8" class="visually-hidden">Вопрос</label>
+                <input id="input8" type="text" placeholder="Ответ...">
+                <button type="submit">Проверить</button>
+            </form>
+            <span class="wrong" id="wrong8">Не очень популярный ответ</span>
+            <ol>
+                <li class="active"><span id="item-8-1" class="item hide"><span>Замыкания</span><span class="result">21</span></span></li>
+                <li class="active"><span id="item-8-2" class="item hide"><span>Кем вы себя видите через 5 лет?</span><span class="result">13</span></span></li>
+                <li class="active"><span id="item-8-3" class="item hide"><span>Расскажите о себе?</span><span class="result">8</span></span></li>
+                <li class="active"><span id="item-8-4" class="item hide"><span>Почему вы выбрали нас?</span><span class="result">5</span></span></li>
+                <li class="active"><span id="item-8-5" class="item hide"><span>Зарплатные ожидания</span><span class="result">3</span></span></li>
+                <li class="active"><span id="item-8-6" class="item hide"><span>Про JavaScript</span><span class="result">1</span></span></li>
+            </ol>
+        </div>
 
-<!--    <section class="slide">-->
-<!--        <div class="background answer">-->
-<!--            <form id="form8">-->
-<!--                <h2>Самый популярный и надоевший вопрос на собеседованиях?</h2>-->
-<!--                <label for="input8" class="visually-hidden">Вопрос</label>-->
-<!--                <input id="input8" type="text" placeholder="Ответ...">-->
-<!--                <button type="submit">Проверить</button>-->
-<!--            </form>-->
-<!--            <span class="wrong" id="wrong8">Не очень популярный ответ</span>-->
-<!--            <ol>-->
-<!--                <li class="active"><span id="item-8-1" class="item hide"><span>Замыкания</span><span class="result">21</span></span></li>-->
-<!--                <li class="active"><span id="item-8-2" class="item hide"><span>Кем вы себя видите через 5 лет?</span><span class="result">13</span></span></li>-->
-<!--                <li class="active"><span id="item-8-3" class="item hide"><span>Расскажите о себе?</span><span class="result">8</span></span></li>-->
-<!--                <li class="active"><span id="item-8-4" class="item hide"><span>Почему вы выбрали нас?</span><span class="result">5</span></span></li>-->
-<!--                <li class="active"><span id="item-8-5" class="item hide"><span>Зарплатные ожидания</span><span class="result">3</span></span></li>-->
-<!--                <li class="active"><span id="item-8-6" class="item hide"><span>Про JavaScript</span><span class="result">1</span></span></li>-->
-<!--            </ol>-->
-<!--        </div>-->
+        <script>
+            const form8 = document.getElementById('form8');
+            const input8 = document.getElementById('input8');
+            const item_8_1 = document.getElementById('item-8-1');
+            const item_8_2 = document.getElementById('item-8-2');
+            const item_8_3 = document.getElementById('item-8-3');
+            const item_8_4 = document.getElementById('item-8-4');
+            const item_8_5 = document.getElementById('item-8-5');
+            const item_8_6 = document.getElementById('item-8-6');
+            const wrong8 = document.getElementById('wrong8');
+            const value_8_1 = ['замыкания', 'про замыкания', 'closure'];
+            const value_8_2 = ['кем вы себя видете через несколько лет', 'кем вы себя видете через 5 лет', 'кем вы себя видите через несколько лет'
+                , 'кем вы себя видите через 5 лет'];
+            const value_8_3 = ['о себе', 'расскажите о себе', 'достоинства', 'сильные и слабые стороны', 'сильные стороны'];
+            const value_8_4 = ['почему вы выбрали нас', 'почему к нам', 'почему наша компания'];
+            const value_8_5 = ['зарплата', 'зп', 'зарплатные ожидания', 'почему так много'];
+            const value_8_6 = ['js', 'javascript', 'про джс', 'про  джаваскрипт'];
 
-<!--        <script>-->
-<!--            const form8 = document.getElementById('form8');-->
-<!--            const input8 = document.getElementById('input8');-->
-<!--            const item_8_1 = document.getElementById('item-8-1');-->
-<!--            const item_8_2 = document.getElementById('item-8-2');-->
-<!--            const item_8_3 = document.getElementById('item-8-3');-->
-<!--            const item_8_4 = document.getElementById('item-8-4');-->
-<!--            const item_8_5 = document.getElementById('item-8-5');-->
-<!--            const item_8_6 = document.getElementById('item-8-6');-->
-<!--            const wrong8 = document.getElementById('wrong8');-->
-<!--            const value_8_1 = ['замыкания', 'про замыкания', 'closure'];-->
-<!--            const value_8_2 = ['кем вы себя видете через несколько лет', 'кем вы себя видете через 5 лет', 'кем вы себя видите через несколько лет'-->
-<!--                , 'кем вы себя видите через 5 лет'];-->
-<!--            const value_8_3 = ['о себе', 'расскажите о себе', 'достоинства', 'сильные и слабые стороны', 'сильные стороны'];-->
-<!--            const value_8_4 = ['почему вы выбрали нас', 'почему к нам', 'почему наша компания'];-->
-<!--            const value_8_5 = ['зарплата', 'зп', 'зарплатные ожидания', 'почему так много'];-->
-<!--            const value_8_6 = ['js', 'javascript', 'про джс', 'про  джаваскрипт'];-->
-
-<!--            validateAnswer(form8, input8, wrong8, item_8_1, item_8_2, item_8_3, item_8_4, item_8_5, item_8_6,-->
-<!--                value_8_1, value_8_2, value_8_3, value_8_4, value_8_5, value_8_6);-->
-<!--        </script>-->
-<!--    </section>-->
+            validateAnswer(form8, input8, wrong8, item_8_1, item_8_2, item_8_3, item_8_4, item_8_5, item_8_6,
+                value_8_1, value_8_2, value_8_3, value_8_4, value_8_5, value_8_6);
+        </script>
+    </section>
 
     <section class="slide" id="thanks">
         <header class="background">
